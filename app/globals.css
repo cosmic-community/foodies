@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --food-warm: #f97316;
+    --food-deep: #c2410c;
+    --food-earth: #78350f;
+    --food-cream: #fef9f0;
+    --food-sage: #65a30d;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fffbeb;
+    color: #1f2937;
+  }
+}
+
+@layer components {
+  .prose-food {
+    @apply prose prose-amber max-w-none;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .tag-badge {
+    @apply inline-block bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full;
+  }
+}
